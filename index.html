@@ -26,7 +26,43 @@
                 <strong>Projeto</strong>
             </div>
 
-            <div class="form-step active"></div>
+            <div class="form-step active">
+                <div class="content">
+                    <div class="input-warpper">
+                        <label for="name">Nome</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Como prefere ser chamado"
+                            required
+                        />
+                    </div>
+                    <div class="input-warpper">
+                        <label for="tel">Whatsapp</label>
+                        <input
+                            type="text"
+                            id="tel"
+                            name="tel"
+                            placeholder="Digite seu número do Whatsapp"
+                            onkeypress="return /\d/.test(event.key)"
+                        />
+                    </div>
+                    <div class="input-warpper">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Digite seu email"
+                            required
+                        />
+                    </div>
+                </div>
+                <div class="button-wrapper justify-end">
+                    <button class="btn btn-primary">Continuar</button>
+                </div>
+            </div>
         </form>
     </main>
 

@@ -20,7 +20,11 @@
     font-size: 62.5%;
 }
 
-html, body, input, textarea, button {
+html,
+body,
+input,
+textarea,
+button {
     font-size: 1.6rem;
     font-family: 'IBM Plex Sans', sans-serif;
 }
@@ -88,4 +92,80 @@ form {
 .step-progress .done::before {
     content: '✔';
     background-color: var(--success)
+}
+
+.content {
+    margin-top: 3.2rem;
+
+    display: grid;
+    gap: 1.6rem;
+}
+
+.button-wrapper {
+    margin-top: 3.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6rem;
+
+    border: 0;
+    border-radius: .6rem;
+
+    font-weight: 700;
+    text-transform: uppercase;
+
+    min-width: 15.8rem;
+    cursor: pointer;
+
+    transition: all ease-in-out .3s;
+}
+
+.btn-primary {
+    background-color: var(--purple-light);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--purple-mid);
+}
+
+.btn-secondary {
+    background-color: var(--gray-100);
+    color: var(--gray-400);
+}
+
+.btn-secondary:hover {
+    /* background-color: var(--gray-200); */
+    opacity: .6;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+label {
+    font-weight: 700;
+    color: var(--gray-400);
+}
+
+input,
+textarea {
+    width: 100%;
+    margin-top: 4px;
+
+    padding: 1.6rem;
+    background-color: var(--gray-50);
+
+    border: 1px solid var(--gray-100);
+    border-radius: .5rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--gray-200);
 }
