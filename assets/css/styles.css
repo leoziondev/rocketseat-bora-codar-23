@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --white: #ffffff;
+    --gray-50: #f9fafb;
+    --gray-100: #e1e1e6;
+    --gray-200: #8c8c99;
+    --gray-300: #7c7c8a;
+    --gray-400: #323238;
+    --success: #1d8841;
+    --purple-light: #8257e5;
+    --purple-mid: #633bbc;
+
+    font-size: 62.5%;
+}
+
+html, body, input, textarea, button {
+    font-size: 1.6rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+
+    display: grid;
+    place-content: center;
+    background-color: var(--gray-50)
+}
+
+form {
+    padding: 3.2rem;
+    border-radius: .6rem;
+
+    background-color: var(--white)
+}
+
+.step-progress {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    border-bottom: 1px solid var(--gray-50);
+    padding-bottom: 3.2rem;
+
+    counter-reset: step;
+}
+
+.step-progress strong {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+
+    color: var(--gray-200);
+}
+
+.step-progress strong.active {
+    color: var(--gray-400);
+}
+
+.step-progress strong::before {
+    counter-increment: step;
+    content: counter(step);
+    font-family: 'Titillium Web';
+    font-size: 1.4rem;
+
+    background-color: var(--gray-100);
+    color: var(--gray-200);
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-progress .active::before {
+    background-color: var(--purple-mid);
+    color: var(--white);
+}
+
+.step-progress .done::before {
+    content: '✔';
+    background-color: var(--success)
+}
